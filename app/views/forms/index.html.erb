@@ -1,0 +1,28 @@
+<div id="forms">
+  <%= render @forms %>
+</div>
+<br>
+<%= link_to 'New form', new_form_path %>
+<br>
+<%= form_for(Form.new, remote: true) do |f| %>
+    <div class="col-md-4">
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :text %><br>
+      <%= f.text_area :text, class: "form-control" %>
+    </div>
+      <br>
+    <div class="actions">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+    </div>
+<% end %>
+
+

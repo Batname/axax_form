@@ -1,0 +1,11 @@
+%h1 Новая почта
+
+
+
+= form_for @email do |f|
+
+
+  %p= f.text_field :email, placeholder: 'Почта'
+  %p= f.text_field :frequency, placeholder: 'Периодичность рассылки'
+  %p= f.submit 'Добавить!'
+

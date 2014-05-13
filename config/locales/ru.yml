@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    attributes:
+      email:
+        email: "Почта"
+        frequency: "Периодичность"
+    errors:
+      models:
+        email:
+          attributes:
+            email:
+              blank: "обязательна"
+              taken: "уже добавлена в список рассылки"
+              invalid: "имеет странный формат"
+            frequency:
+              inclusion: "должна быть в диапазоне от 1 до 7 включительно"
+            text:
+              too_short: "минимум 6 символов"

@@ -1,0 +1,6 @@
+<% if @email.new_record? %>
+$('input#email_title').effect('highlight', { color: 'red' });
+<% else %>
+$('div#emails').append("<%= escape_javascript(render @email) %>");
+$('div#<%= dom_id(@email) %>').effect('highlight');
+<% end %>

@@ -1,0 +1,6 @@
+<% if @form.new_record? %>
+$('input#form_title').effect('highlight', { color: 'red' });
+<% else %>
+$('div#forms').append("<%= escape_javascript(render @form) %>");
+$('div#<%= dom_id(@form) %>').effect('highlight');
+<% end %>

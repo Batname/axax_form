@@ -1,0 +1,6 @@
+<%= div_for email do %>
+    <div class="row">
+      <div class="col-md-1"><%= email.email %></div>
+      <div class="col-md-1"> <%= link_to 'delete', email, method: :delete, remote: true %></div>
+    </div>
+<% end %>
