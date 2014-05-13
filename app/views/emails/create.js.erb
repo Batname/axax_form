@@ -1,6 +1,12 @@
 <% if @email.new_record? %>
-$('input#email_title').effect('highlight', { color: 'red' });
+//$('input#email_title').effect('highlight', { color: 'red' });
+
 <% else %>
 $('div#emails').append("<%= escape_javascript(render @email) %>");
 $('div#<%= dom_id(@email) %>').effect('highlight');
+$('input#loading-example-btn').show();
+$('form#new_email').hide().delay( 2000 ).fadeIn(1000);
+$('div#formid').show().delay( 1500 ).fadeOut(1000);;
+
+
 <% end %>

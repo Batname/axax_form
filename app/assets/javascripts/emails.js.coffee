@@ -1,6 +1,5 @@
 jQuery ->
   validate_url = '/emails/validate'
-
   $('#new_email, [id^=edit_email_]').validate(
     #debug: true
     rules:

@@ -1,20 +1,29 @@
+
 <div class="col-md-3 col-md-offset-3">
-<%= form_for @email, remote: true do |f|%>
-    <%= render 'shared/error_messages', object: f.object %>
-    <p>
-      <%= f.text_field :email, class: "form-control" %>
-    </p>
+  <div id="formid" style="display: none"><%= image_tag ("loading.jpg") %></div>
+  <%= form_for @email, remote: true do |f|%>
+      <%= render 'shared/error_messages', object: f.object %>
+      <p>
+        <%= f.text_field :email, onkeyup: false, class: "form-control" %>
+      </p>
 
-    <p>
-      <%= f.text_field :frequency, class: "form-control" %>
-    </p>
+      <p>
+        <%= f.text_field :frequency, onkeyup: false, class: "form-control" %>
+      </p>
 
-    <p>
-      <%= f.text_area :text, class: "form-control" %>
-    </p>
+      <p>
+        <%= f.text_area :text, onkeyup: false, class: "form-control"  %>
+      </p>
 
-    <p>
-      <%= f.submit class: "btn btn-primary" %>
-    </p>
-<% end %>
+      <p id = "formula">
+        <%= f.button class: "submit",  id: "loading"%>
+      <div id="loading-indicator">
+        <button type="button" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-primary">
+          Loading state
+        </button>
+        <%= image_tag("loading.jpg", :id => "loading-indicator", :style => "display:none") %>
+      </div>
+      </p>
+
+  <% end %>
 </div>

@@ -17,6 +17,7 @@ class EmailsController < ApplicationController
     respond_to do |format|
       format.json { render json: @errors }
     end
+
   end
 
   def create
